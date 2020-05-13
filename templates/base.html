@@ -11,10 +11,55 @@
 
 <body>
 
-    
+    <nav class="hide-on-med-and-down">
+        <div class="nav-wrapper grey darken-1">
+            <ul class="right">
+                <li><a href="">Shop</a></li>
+                <li><a href="">Profile</a></li>
+                <li><a href="">Logout</a></li>
+                <li><a href="">Register</a></li>
+                <li><a href="">Login</a></li>
+                <li><a href="">Search</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav>
+        <div class="nav-wrapper yellow darken-2">
+            <a href="" class="brand-logo">Logo</a>
+            <a href="" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="">Home</a></li>
+                <li><a href="">Donate</a></li>
+                <li><a href="">Gallery</a></li>
+                <li><a href="">About</a></li>
+                <li><a href=""><i class="material-icons">shopping_cart</i></a></li>
+            </ul>
+            <ul class="side-nav" id="mobile">
+                <li><a href="">Home</a></li>
+                <li><a href="">Donate</a></li>
+                <li><a href="">Shop</a></li>
+                <li><a href=""><i class="material-icons">shopping_cart</i></a></li>
+                <li>
+                    <div class="divider"></div>
+                </li>
+                <li><a href="">Profile</a></li>
+                <li><a href="">Logout</a></li>
+                <li><a href="">Register</a></li>
+                <li><a href="">Login</a></li>
+                <li><a href="">Gallery</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Search</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
     {% block content %}{% endblock %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script>
+        $(".button-collapse").sideNav();
+    </script>
 </body>
 
 </html>
