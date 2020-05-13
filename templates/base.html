@@ -14,7 +14,7 @@
 <body>
 
     <nav class="hide-on-med-and-down">
-        <div class="nav-wrapper grey darken-1">
+        <div class="nav-wrapper grey darken-4">
             <ul class="right">
                 <li><a href="">Shop</a></li>
                 <li><a href="">Profile</a></li>
@@ -26,7 +26,7 @@
         </div>
     </nav>
     <nav>
-        <div class="nav-wrapper yellow darken-2">
+        <div class="nav-wrapper yellow darken-3">
             <a href="" class="brand-logo">Logo</a>
             <a href="" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
@@ -58,12 +58,25 @@
 
     {% block content %}{% endblock %}
 
-    <footer class="page-footer grey darken-1">
+    <section>
+        <div class="parallax-container">
+            <div class="parallax">
+                <img class="subscribe-image-bg" src="{% static 'img/subscribe-bg.jpg' %}">
+            </div>
+        </div>
+        <div class="subscribe-content">
+            <p class="subscribe-content-text">Test subscribe text</p>
+        </div>
+    </section>
+
+    <footer class="page-footer yellow darken-4">
         <div class="container">
             <div class="row">
                 <div class="col m6 s12 center-align">
                     <h5 class="white-text">Content</h5>
-                    <p class="grey-text text-lighten-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione, explicabo perspiciatis? Commodi porro nulla sit reiciendis magni natus, perferendis libero.</p>
+                    <p class="grey-text text-lighten-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Ratione, explicabo perspiciatis? Commodi porro nulla sit reiciendis magni natus, perferendis
+                        libero.</p>
                 </div>
                 <div class="col m3 s12 center-align">
                     <h5 class="white-text">Links</h5>
