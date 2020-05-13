@@ -1,0 +1,11 @@
+.env
+.vscode
+.pylintrc
+*.sqlite3
+__pycache__
+*.pyc
+env.py
+static/
+media/
+*.png
+*.jpg
