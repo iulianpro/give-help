@@ -17,10 +17,13 @@
         <div class="nav-wrapper grey darken-1">
             <ul class="right">
                 <li><a href="">Shop</a></li>
+                {% if user.is_authenticated %}
                 <li><a href="">Profile</a></li>
-                <li><a href="">Logout</a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+                {% else %}
                 <li><a href="">Register</a></li>
                 <li><a href="">Login</a></li>
+                {% endif %}
                 <li><a href="">Search</a></li>
             </ul>
         </div>
@@ -45,10 +48,13 @@
                 <li>
                     <div class="divider"></div>
                 </li>
+                {% if user.is_authenticated %}
                 <li><a href="">Profile</a></li>
-                <li><a href="">Logout</a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+                {% else %}
                 <li><a href="">Register</a></li>
                 <li><a href="">Login</a></li>
+                {% endif %}
                 <li><a href="">Gallery</a></li>
                 <li><a href="">About</a></li>
                 <li><a href="">Search</a></li>
