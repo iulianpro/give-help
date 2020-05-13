@@ -5,7 +5,3 @@
 __pycache__
 *.pyc
 env.py
-static/
-media/
-*.png
-*.jpg
