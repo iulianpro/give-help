@@ -1,3 +1,20 @@
+html {
+    font-size: 18px;
+}
+
+.navbar-main {
+    background-color: #fc9700;
+}
+
+nav.navbar-top {
+    height: 35px;
+    line-height: 35px;
+}
+
+nav.navbar-top a {
+    font-size: 14px;
+}
+
 .subscribe-image-bg {
     filter: blur(4px);
 }
@@ -14,8 +31,12 @@
     font-size: 50px;
 }
 
+.bg-footer {
+    background-color: #ef6c00;
+}
+
 @media (min-width: 992px) {
     .subscribe-content-text {
-        margin-top: 40%;
+        margin-top: 30%;
     }
 }
