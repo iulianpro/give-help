@@ -2,10 +2,6 @@ html {
     font-size: 18px;
 }
 
-.navbar-main {
-    background-color: #fc9700;
-}
-
 nav.navbar-top {
     height: 35px;
     line-height: 35px;
@@ -13,6 +9,16 @@ nav.navbar-top {
 
 nav.navbar-top a {
     font-size: 14px;
+}
+
+.navbar-main {
+    background-color: #c5c5c5;
+}
+
+.navbar-main a {
+    color: #3d3d3d;
+    font-size: 20px;
+    font-weight: 500;    
 }
 
 .subscribe-image-bg {
@@ -31,8 +37,13 @@ nav.navbar-top a {
     font-size: 50px;
 }
 
-.bg-footer {
-    background-color: #ef6c00;
+.footer {
+    background-color: #c5c5c5;
+    color: #3d3d3d;
+}
+
+.footer a {
+    color: #3d3d3d;
 }
 
 @media (min-width: 992px) {
