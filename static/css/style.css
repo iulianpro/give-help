@@ -1,0 +1,21 @@
+.subscribe-image-bg {
+    filter: blur(4px);
+}
+
+.subscribe-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+}
+
+.subscribe-content-text {
+    font-size: 50px;
+}
+
+@media (min-width: 992px) {
+    .subscribe-content-text {
+        margin-top: 40%;
+    }
+}
