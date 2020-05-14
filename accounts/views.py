@@ -3,6 +3,7 @@ from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
 from home.views import index
 from accounts.forms import UserLoginForm, UserRegistrationForm
+from django.contrib.auth.models import User
 
 # Create your views here.
 
@@ -60,5 +61,10 @@ def registration(request):
                     request, "Something went wrong, please try again")
     else:
         registration_form = UserRegistrationForm()
-    
+
     return render(request, 'registration.html', {"registration_form": registration_form})
+
+
+def user_profile(request):
+    user = User.objects.get(email=request.user.email)
+    return render(request, 'profile.html', {"profile": user})

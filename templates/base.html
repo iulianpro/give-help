@@ -20,7 +20,7 @@
             <ul class="right">
                 <li><a href="">Shop</a></li>
                 {% if user.is_authenticated %}
-                <li><a href="">{{ user.first_name }}'s account</a></li>
+                <li><a href="{% url 'profile' %}">{{ user.first_name }}'s account</a></li>
                 <li><a href="{% url 'logout' %}">Logout</a></li>
                 {% else %}
                 <li><a href="{% url 'registration' %}">Register</a></li>
@@ -50,7 +50,7 @@
                     <div class="divider"></div>
                 </li>
                 {% if user.is_authenticated %}
-                <li><a href="">{{ user.first_name }}'s account</a></li>
+                <li><a href="{% url 'profile' %}">{{ user.first_name }}'s account</a></li>
                 <li><a href="{% url 'logout' %}">Logout</a></li>
                 {% else %}
                 <li><a href="{% url 'registration' %}">Register</a></li>
