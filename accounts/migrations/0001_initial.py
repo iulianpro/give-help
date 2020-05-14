@@ -26,7 +26,7 @@ class Migration(migrations.Migration):
                 ('street_address1', models.CharField(max_length=50)),
                 ('street_address2', models.CharField(blank=True, max_length=50, null=True)),
                 ('county', models.CharField(max_length=20)),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
             ],
         ),
     ]
