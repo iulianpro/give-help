@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.models import User
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from django.core.exceptions import ValidationError
 from accounts.models import Donor
 
@@ -49,6 +49,13 @@ class UserRegistrationForm(UserCreationForm):
             raise ValidationError("Passwords do not match")
 
         return password2
+
+
+class EditProfileForm(UserChangeForm):
+
+    class Meta:
+        model = User
+        fields = ['email', 'username', 'first_name', 'last_name', 'password']
 
 
 class DonorForm(forms.ModelForm):

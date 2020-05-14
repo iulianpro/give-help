@@ -4,7 +4,9 @@
 
 <p>Email: {{ view_profile.email }}</p>
 <p>Username: {{ view_profile.username }}</p>
-<p>Last name: {{ view_profile.last_name }}</p>
 <p>First name: {{ view_profile.first_name }}</p>
+<p>Last name: {{ view_profile.last_name }}</p>
+
+<a href="{% url 'edit_profile' %}">Edit profile</a>
 
 {% endblock %}
