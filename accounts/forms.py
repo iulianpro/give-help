@@ -2,6 +2,7 @@ from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.core.exceptions import ValidationError
+from accounts.models import Donor
 
 
 class UserLoginForm(forms.Form):
@@ -33,7 +34,8 @@ class UserRegistrationForm(UserCreationForm):
         email = self.cleaned_data.get('email')
         username = self.cleaned_data.get('username')
         if User.objects.filter(email=email).exclude(username=username):
-            raise forms.ValidationError(u'An account with this email already exists')
+            raise forms.ValidationError(
+                u'An account with this email already exists')
         return email
 
     def clean_password2(self):
@@ -47,3 +49,16 @@ class UserRegistrationForm(UserCreationForm):
             raise ValidationError("Passwords do not match")
 
         return password2
+
+
+class DonorForm(forms.ModelForm):
+    class Meta:
+        model = Donor
+        fields = [
+            "phone_number",
+            "postcode",
+            "town_city",
+            "street_address1",
+            "street_address2",
+            "county",
+        ]
