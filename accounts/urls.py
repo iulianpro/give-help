@@ -6,5 +6,5 @@ urlpatterns = [
     url(r'^logout/$', logout, name='logout'),
     url(r'^login/$', login, name='login'),
     url(r'^register/$', registration, name="registration"),
-    url(r'^profile/$', view_profile, name="profile")
+    url(r'^profile/$', view_profile, name="view_profile")
 ]
