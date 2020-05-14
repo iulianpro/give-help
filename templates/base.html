@@ -24,7 +24,7 @@
                 <li><a href="{% url 'logout' %}">Logout</a></li>
                 {% else %}
                 <li><a href="">Register</a></li>
-                <li><a href="">Login</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
                 {% endif %}
                 <li><a href="">Search</a></li>
             </ul>
@@ -54,7 +54,7 @@
                 <li><a href="{% url 'logout' %}">Logout</a></li>
                 {% else %}
                 <li><a href="">Register</a></li>
-                <li><a href="">Login</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
                 {% endif %}
                 <li><a href="">Gallery</a></li>
                 <li><a href="">About</a></li>
