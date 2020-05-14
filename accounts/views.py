@@ -67,4 +67,4 @@ def registration(request):
 
 def view_profile(request):
     user = User.objects.get(email=request.user.email)
-    return render(request, 'profile.html', {"profile": user})
+    return render(request, 'profile.html', {"view_profile": user})
