@@ -21,6 +21,10 @@ nav.navbar-top a {
     font-weight: 500;    
 }
 
+.subscribe {
+    position: relative;
+}
+
 .subscribe-image-bg {
     filter: blur(4px);
 }
