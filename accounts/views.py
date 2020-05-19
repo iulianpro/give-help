@@ -2,8 +2,9 @@ from django.shortcuts import redirect, reverse, render
 from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
 from home.views import index
-from accounts.forms import UserLoginForm, UserRegistrationForm, EditProfileForm
+from accounts.forms import UserLoginForm, UserRegistrationForm, EditProfileForm, DonorForm
 from django.contrib.auth.models import User
+from accounts.models import Donor
 
 # Create your views here.
 
@@ -66,17 +67,23 @@ def registration(request):
 
 
 def view_profile(request):
-    user = User.objects.get(email=request.user.email)
-    return render(request, 'profile.html', {"view_profile": user})
+    donor = Donor.objects.get(user_id=request.user.id)
+    return render(request, 'profile.html', {"donor": donor})
 
 
 def edit_profile(request):
     if request.method == "POST":
         edit_profile_form = EditProfileForm(request.POST, instance=request.user)
+        edit_donor_form = DonorForm(request.POST, instance=request.user.profile)
 
-        if edit_profile_form.is_valid():
+        if edit_profile_form.is_valid() and edit_donor_form.is_valid():
             edit_profile_form.save()
+            edit_donor_form.save()
+            messages.success(request, "Account updated")
             return redirect('view_profile')
+        else:
+            messages.error(request, ('Please correct the error'))
     else:
         edit_profile_form = EditProfileForm(instance=request.user)
-        return render(request, 'edit-profile.html', {"edit_profile_form": edit_profile_form})
+        edit_donor_form = DonorForm(instance=request.user.profile)
+        return render(request, 'edit-profile.html', {"edit_profile_form": edit_profile_form, 'edit_donor_form': edit_donor_form})

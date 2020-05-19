@@ -2,10 +2,11 @@
 
 {% block content %}
 
-<p>Email: {{ view_profile.email }}</p>
-<p>Username: {{ view_profile.username }}</p>
-<p>First name: {{ view_profile.first_name }}</p>
-<p>Last name: {{ view_profile.last_name }}</p>
+<p>Email: {{ user.email }}</p>
+<p>Username: {{ user.username }}</p>
+<p>First name: {{ user.first_name }}</p>
+<p>Last name: {{ user.last_name }}</p>
+<p>City: {{ user.profile.town_city }}</p>
 
 <a href="{% url 'edit_profile' %}">Edit profile</a>
 

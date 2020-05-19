@@ -5,6 +5,7 @@
 <form method="POST">
     {% csrf_token %}
     {{ edit_profile_form.as_p }}
+    {{ edit_donor_form.as_p}}
     <button type="submit">Update</button>
 </form>
 

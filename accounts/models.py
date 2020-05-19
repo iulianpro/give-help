@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 
 
 class Donor(models.Model):
-    user = models.OneToOneField(User)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
     phone_number = models.IntegerField(default=0)
     postcode = models.CharField(max_length=10)
     town_city = models.CharField(max_length=20)
@@ -14,4 +14,4 @@ class Donor(models.Model):
     county = models.CharField(max_length=20)
 
     def __str__(self):
-        return self.user.first_name + ' ' + self.user.last_name
+        return self.user.first_name + ' ' + self.user.last_name + ' (' + self.user.profile.town_city + ')'
