@@ -1,10 +1,20 @@
+/* General */
+
 html {
     font-size: 18px;
 }
 
+/* Navigation */
+
 nav.navbar-top {
+    background-color: #1049B3;
     height: 35px;
     line-height: 35px;
+    font-weight: 300;
+}
+
+ul.right {
+    margin-right: 20px;
 }
 
 nav.navbar-top a {
@@ -12,14 +22,18 @@ nav.navbar-top a {
 }
 
 .navbar-main {
-    background-color: #c5c5c5;
+    background-color: #FFE1A1;
 }
 
 .navbar-main a {
     color: #3d3d3d;
     font-size: 20px;
-    font-weight: 500;    
+    font-weight: 300;    
 }
+
+/* Content block */
+
+/* Subscribe section */
 
 .subscribe {
     position: relative;
@@ -41,6 +55,8 @@ nav.navbar-top a {
     font-size: 50px;
 }
 
+/* Footer */
+
 .footer {
     background-color: #c5c5c5;
     color: #3d3d3d;
@@ -49,6 +65,8 @@ nav.navbar-top a {
 .footer a {
     color: #3d3d3d;
 }
+
+/* Media query */
 
 @media (min-width: 992px) {
     .subscribe-content-text {

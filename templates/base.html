@@ -16,7 +16,7 @@
 <body>
 
     <nav class="navbar-top hide-on-med-and-down">
-        <div class="nav-wrapper grey darken-1">
+        <div class="nav-wrapper">
             <ul class="right">
                 <li><a href="">Shop</a></li>
                 {% if user.is_authenticated %}
@@ -73,7 +73,7 @@
                             position: 'top-center',
                             textAlign: 'center',
                             icon: '{{ message.tags }}',
-                            hideAfter: 10000
+                            hideAfter: 3000
                         });
                     });
                 </script>
