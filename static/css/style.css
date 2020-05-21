@@ -20,6 +20,10 @@ a:hover {
     border-radius: 15px;
 }
 
+.hide {
+    display: none;
+}
+
 /* Navigation */
 
 nav.navbar-top {

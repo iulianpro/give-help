@@ -52,10 +52,10 @@ class UserRegistrationForm(UserCreationForm):
 
 
 class EditProfileForm(UserChangeForm):
-
+    password = None
     class Meta:
         model = User
-        fields = ['email', 'username', 'first_name', 'last_name', 'password']
+        fields = ['email', 'username', 'first_name', 'last_name']
 
 
 class DonorForm(forms.ModelForm):

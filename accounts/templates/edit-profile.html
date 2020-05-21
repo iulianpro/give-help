@@ -2,11 +2,49 @@
 
 {% block content %}
 
-<form method="POST">
-    {% csrf_token %}
-    {{ edit_profile_form.as_p }}
-    {{ edit_donor_form.as_p}}
-    <button type="submit">Update</button>
-</form>
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col s10 offset-s1">
+                <div class="row">
+                    <div class="col s12">
+                        <p class="center-align flow-text bold-text">Edit {{ user.first_name }}'s profile</p>
+                    </div>
+                </div>
+                <div class="row z-depth-3 white round-corner">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col s12 m6">
+                                <div class="profile-card">
+                                    {% for field in edit_profile_form %}
+                                        {{ field.label_tag }}
+                                        {{ field }}
+                                        {% if field.help_text %}
+                                            <p class="form-help-text">{{ field.help_text }}</p>
+                                        {% endif %}
+                                        {% for error in field.errors %}
+                                            <p class="form-error-text">{{ error }}</p>
+                                        {% endfor %}
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="col s12 m6">
+                                <div class="profile-card">
+                                    {{ edit_donor_form }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="center-align">
+                                <button class="waves-effect waves-light btn-large bg-button round-corner" type="submit"">Update profile</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
