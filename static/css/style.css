@@ -24,6 +24,16 @@ a:hover {
     display: none;
 }
 
+/* Materiali override */
+
+i.material-icons.prefix {
+    color: #FFAF02;
+}
+
+.material-icons.prefix.active {
+    color: #dd9803;
+}
+
 /* Navigation */
 
 nav.navbar-top {
@@ -55,7 +65,7 @@ nav.navbar-top a {
 
 .section {
     background-color: #f9f9f9;
-    min-height: 80vh;
+    min-height: 50vh;
 }
 
 form {
@@ -122,6 +132,9 @@ form {
 /* Media query */
 
 @media (min-width: 992px) {
+    .section {
+        min-height: 80vh;
+    }
     .subscribe-content-text {
         margin-top: 30%;
     }
