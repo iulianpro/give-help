@@ -79,14 +79,23 @@ form {
 }
 
 .form-help-text {
-    font-size: 12px;
+    font-size: 14px;
     font-style: italic;
     color: #696969;
 }
 
 .form-error-text {
     font-size: 14px;
+    font-style: italic;
     color: #ff0000;
+}
+
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=text]:focus,
+input[type=number]:focus {
+    border-bottom: 1px solid #FFAF02 !important;
+    box-shadow: 0 1px 0 0 #FFAF02 !important;
 }
 
 .bg-button {
