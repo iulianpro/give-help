@@ -2,12 +2,45 @@
 
 {% block content %}
 
-<p>Email: {{ user.email }}</p>
-<p>Username: {{ user.username }}</p>
-<p>First name: {{ user.first_name }}</p>
-<p>Last name: {{ user.last_name }}</p>
-<p>City: {{ user.profile.town_city }}</p>
-
-<a href="{% url 'edit_profile' %}">Edit profile</a>
-
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col s10 offset-s1">
+                <div class="row">
+                    <div class="col s12">
+                        <p class="center-align flow-text bold-text">{{ user.first_name }}'s account</p>
+                    </div>
+                </div>
+                <div class="row z-depth-3 white round-corner">
+                    <div class="row">
+                        <div class="col s12 m6">
+                            <div class="profile-card">
+                                <p>Email: {{ user.email }}</p>
+                                <p>Username: {{ user.username }}</p>
+                                <p>First name: {{ user.first_name }}</p>
+                                <p>Last name: {{ user.last_name }}</p>
+                                <p>City: {{ user.profile.town_city }}</p>
+                            </div>
+                        </div>
+                        <div class="col s12 m6">
+                            <div class="profile-card">
+                                <p>Post Code: {{ user.profile.postcode }}</p>
+                                <p>Address: {{ user.profile.street_address1 }}</p>
+                                <p>Address: {{ user.profile.street_address2 }}</p>
+                                <p>Phone: {{ user.profile.phone_number }}</p>
+                                <p>County: {{ user.profile.county }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="center-align">
+                            <a class="waves-effect waves-light btn-large bg-button round-corner"
+                                href="{% url 'edit_profile' %}">Edit account</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
