@@ -80,6 +80,7 @@ form {
 
 .form-help-text {
     font-size: 12px;
+    font-style: italic;
     color: #696969;
 }
 

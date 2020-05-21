@@ -31,7 +31,16 @@
                             </div>
                             <div class="col s12 m6">
                                 <div class="profile-card">
-                                    {{ edit_donor_form }}
+                                    {% for field in edit_donor_form %}
+                                        {{ field.label_tag }}
+                                        {{ field }}
+                                        {% if field.help_text %}
+                                            <p class="form-help-text">{{ field.help_text }}</p>
+                                        {% endif %}
+                                        {% for error in field.errors %}
+                                            <p class="form-error-text">{{ error }}</p>
+                                        {% endfor %}
+                                    {% endfor %}
                                 </div>
                             </div>
                         </div>
