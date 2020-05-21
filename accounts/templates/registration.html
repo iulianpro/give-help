@@ -2,10 +2,41 @@
 
 {% block content %}
 
-<form method="POST">
-    {% csrf_token %}
-    {{ registration_form.as_p }}
-    <button type="submit">Create account</button>
-</form>
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col s10 m8 offset-s1 offset-m2">
+                <div class="row">
+                    <div class="col s12">
+                        <p class="center-align flow-text bold-text">Register new account</p>
+                    </div>
+                </div>
+                <div class="row z-depth-3 white round-corner">
+                    <div class="col s12">
+                        <form method="POST">
+                            {% csrf_token %}
+                            {% for field in registration_form %}
+                                <p>
+                                    {{ field.label_tag }}
+                                    {{ field }}
+                                        {% if field.help_text %}
+                                            <p class="form-help-text">{{ field.help_text }}</p>
+                                        {% endif %}
+                                        {% for error in field.errors %}
+                                            <p class="form-error-text">{{ error }}</p>
+                                        {% endfor %}
+                                    {% endfor %}
+                                </p>
+                            <div class="center-align">
+                            <button class="waves-effect waves-light btn-large bg-button round-corner"
+                                type="submit">Create account</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

@@ -58,6 +58,16 @@ form {
     padding: 20px 5px;
 }
 
+.form-help-text {
+    font-size: 12px;
+    color: #696969;
+}
+
+.form-error-text {
+    font-size: 14px;
+    color: #ff0000;
+}
+
 .bg-button {
     background-color: #FFAF02;
 }
