@@ -4,6 +4,22 @@ html {
     font-size: 18px;
 }
 
+.bold-text {
+    font-weight: 700;
+}
+
+a {
+    color: #1049B3;
+}
+
+a:hover {
+    color: #022463;
+}
+
+.round-corner {
+    border-radius: 15px;
+}
+
 /* Navigation */
 
 nav.navbar-top {
@@ -32,6 +48,23 @@ nav.navbar-top a {
 }
 
 /* Content block */
+
+.section {
+    background-color: #f9f9f9;
+    min-height: 80vh;
+}
+
+form {
+    padding: 20px 5px;
+}
+
+.bg-button {
+    background-color: #FFAF02;
+}
+
+.bg-button:hover {
+    background-color: #dd9803;
+}
 
 /* Subscribe section */
 
@@ -71,5 +104,9 @@ nav.navbar-top a {
 @media (min-width: 992px) {
     .subscribe-content-text {
         margin-top: 30%;
+    }
+
+    form {
+        padding: 30px;
     }
 }
