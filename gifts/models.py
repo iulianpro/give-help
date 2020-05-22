@@ -6,7 +6,7 @@ class GiftCategory(models.Model):
     name = models.CharField(max_length=255)
 
     def __str__(self):
-        return self.name + ' (id: ' + self.id + ')'
+        return "{0} (ID:{1})".format(self.name, self.id)
 
 
 class Gift(models.Model):
@@ -25,4 +25,4 @@ class Gift(models.Model):
     quantity = models.IntegerField()
 
     def __str__(self):
-        return self.name + ' (' + self.price + ' ' + self.currency + ' - ID: ' + self.id + ')'
+        return "{0} ({1} {2} - ID: {3})".format(self.name, self.price, self.currency, self.id)
