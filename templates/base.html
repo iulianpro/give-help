@@ -34,18 +34,32 @@
         <div class="nav-wrapper">
             <a href="" class="brand-logo"></a>
             <a href="" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="/">Home</a></li>
-                <li><a href="">Donate</a></li>
-                <li><a href="">Gallery</a></li>
-                <li><a href="">About</a></li>
-                <li><a href=""><i class="material-icons">shopping_cart</i></a></li>
+            <ul class="right">
+                <li><a class=" hide-on-med-and-down" href="/">Home</a></li>
+                <li><a class=" hide-on-med-and-down" href="">Donate</a></li>
+                <li><a class=" hide-on-med-and-down" href="">Gallery</a></li>
+                <li><a class=" hide-on-med-and-down" href="">About</a></li>
+                <li>
+                    <a href="{% url 'view_cart' %}">
+                        <i class="material-icons">shopping_cart</i>
+                        {% if gift_count > 0 %}
+                        <span class="white-text badge red">{{gift_count}}</span>
+                        {% endif %}
+                    </a>
+                </li>
             </ul>
             <ul class="side-nav" id="mobile">
                 <li><a href="/">Home</a></li>
                 <li><a href="">Donate</a></li>
                 <li><a href="">Shop</a></li>
-                <li><a href=""><i class="material-icons">shopping_cart</i></a></li>
+                <li>
+                    <a href="{% url 'view_cart' %}">
+                        <i class="material-icons">shopping_cart</i>
+                        {% if gift_count > 0 %}
+                        <span class="white-text badge red">{{gift_count}}</span>
+                        {% endif %}
+                    </a>
+                </li>
                 <li>
                     <div class="divider"></div>
                 </li>
@@ -64,21 +78,21 @@
     </nav>
 
     {% if messages %}
-        {% for message in messages %}
-            {% if message.tags %}
-                <script>
-                    $(document).ready(function () {
-                        $.toast({
-                            text: '{{ message }}',
-                            position: 'top-center',
-                            textAlign: 'center',
-                            icon: '{{ message.tags }}',
-                            hideAfter: 3000
-                        });
-                    });
-                </script>
-            {% endif %}
-        {% endfor %}
+    {% for message in messages %}
+    {% if message.tags %}
+    <script>
+        $(document).ready(function () {
+            $.toast({
+                text: '{{ message }}',
+                position: 'top-center',
+                textAlign: 'center',
+                icon: '{{ message.tags }}',
+                hideAfter: 3000
+            });
+        });
+    </script>
+    {% endif %}
+    {% endfor %}
     {% endif %}
 
     {% block content %}{% endblock %}
@@ -130,7 +144,7 @@
         </div>
     </footer>
 
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script src="{% static 'toasts/js/jquerytoast.js' %}"></script>
     <script src="{% static 'js/script.js' %}"></script>
