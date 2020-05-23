@@ -17,9 +17,16 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from home.views import index
 from accounts import urls as urls_accounts
+from gifts import urls as urls_gifts
+from gifts.views import all_gifts
+from django.views import static
+from .settings import MEDIA_ROOT
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', index, name='index'),
-    url(r'^accounts/', include(urls_accounts))
+    url(r'^accounts/', include(urls_accounts)),
+    url(r'^shop/$', all_gifts, name='gifts'),
+    url(r'^shop/gifts', include(urls_gifts)),
+    url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT})
 ]

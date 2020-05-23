@@ -24,6 +24,13 @@ a:hover {
     display: none;
 }
 
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Materiali override */
 
 i.material-icons.prefix {
@@ -58,7 +65,7 @@ nav.navbar-top a {
 .navbar-main a {
     color: #3d3d3d;
     font-size: 20px;
-    font-weight: 300;    
+    font-weight: 300;
 }
 
 /* Content block */
@@ -70,6 +77,10 @@ nav.navbar-top a {
 
 form {
     padding: 20px 5px;
+}
+
+.form-gift {
+    padding: 0;
 }
 
 .profile-card {
@@ -104,6 +115,11 @@ input[type=number]:focus {
 
 .bg-button:hover {
     background-color: #dd9803;
+}
+
+.quantity-input {
+    max-width: 100px;
+    margin-right: 25px !important;
 }
 
 /* Subscribe section */
