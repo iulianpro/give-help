@@ -3,39 +3,40 @@
 {% block content %}
 
 <div class="section">
-<div class="container">
-    <div class="row">
-        {% for gift in gifts %}
-        <div class="col s10 offset-s1 m6 l4">
-            <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img src="{{ MEDIA_URL }}{{ gift.image }}">
-                </div>
-                <div class="card-content">
-                    <div class="card-title activator grey-text text-darken-4">
-                        <p>{{ gift.name }}<i class="material-icons right">expand_less</i></p>
+    <div class="container">
+        <div class="row">
+            {% for gift in gifts %}
+            <div class="col s10 offset-s1 m6 l4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img src="{{ MEDIA_URL }}{{ gift.image }}">
                     </div>
-                    <div>
-                        <p>{{gift.price}} {{ gift.currency }}</p>
-                    </div>
-                    <form method="POST" action="" class="form-gift">
-                        {% csrf_token %}
-                        <div class="flex-container">
-                            <input class="quantity-input" name="quantity" type="number" min="1" max="999" placeholder="Quantity">
-                            <button class="waves-effect waves-light btn bg-button" type="submit">Add</button>
+                    <div class="card-content">
+                        <div class="card-title activator grey-text text-darken-4">
+                            <p>{{ gift.name }}<i class="material-icons right">expand_less</i></p>
                         </div>
-                    </form>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">{{ gift.name }}<i
-                            class="material-icons right">close</i></span>
-                    <h6>{{ gift.description }}</h6>
+                        <div>
+                            <p>{{gift.price}} {{ gift.currency }}</p>
+                        </div>
+                        <form method="POST" action="" class="form-gift">
+                            {% csrf_token %}
+                            <div class="flex-container">
+                                <input class="quantity-input" name="quantity" type="number" min="1" max="999"
+                                    placeholder="Quantity">
+                                <button class="waves-effect waves-light btn bg-button" type="submit">Add</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">{{ gift.name }}<i
+                                class="material-icons right">close</i></span>
+                        <h6>{{ gift.description }}</h6>
+                    </div>
                 </div>
             </div>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
-</div>
 </div>
 
 {% endblock %}
