@@ -79,6 +79,10 @@ i.material-icons {
 
 nav ul a span.badge {
     margin-left: -2px;
+    transform: translate(-5px, -2px);
+}
+
+.side-nav span.badge {
     transform: translate(0, -2px);
 }
 
