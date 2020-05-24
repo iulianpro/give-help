@@ -23,7 +23,7 @@ def adjust_cart(request, id):
     cart = request.session.get('cart', {})
 
     if quantity > 0:
-        cart[id] = quantity
+        cart[id] = int(cart[id]) + quantity
     else:
         cart.pop(id)
 
