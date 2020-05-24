@@ -18,7 +18,7 @@
     <nav class="navbar-top hide-on-med-and-down">
         <div class="nav-wrapper">
             <ul class="right">
-                <li><a href="">Shop</a></li>
+                <li><a href="{% url 'gifts' %}">Shop</a></li>
                 {% if user.is_authenticated %}
                 <li><a href="{% url 'view_profile' %}">{{ user.first_name }}'s account</a></li>
                 <li><a href="{% url 'logout' %}">Logout</a></li>
@@ -51,7 +51,7 @@
             <ul class="side-nav" id="mobile">
                 <li><a href="/">Home</a></li>
                 <li><a href="">Donate</a></li>
-                <li><a href="">Shop</a></li>
+                <li><a href="{% url 'gifts' %}">Shop</a></li>
                 <li>
                     <a href="{% url 'view_cart' %}">
                         <i class="material-icons">shopping_cart</i>
