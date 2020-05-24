@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+
+{% block content %}
+
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <h4 class="center-align">Gifts basket</h4>
+            </div>
+        </div>
+        <div class="row z-depth-3 white round-corner pb20">
+            {% for item in cart_items %}
+            <div class="col s12">
+                <div class="rox pt25">
+                    <div class="col s12 m3">
+                        <div class="cart-gift-image valign-wrapper cart-center-item">
+                            <img src="{{ MEDIA_URL }}{{ item.gift.image }}">
+                        </div>
+                    </div>
+                    <div class="col s12 m3">
+                        <div class="min-h110 valign-wrapper">
+                            <h6 class="cart-center-item m0">{{ item.gift.name }}</h6>
+                        </div>
+                    </div>
+                    <div class="col s12 m3">
+                        <div class="min-h110 valign-wrapper">
+                            <h6 class="cart-center-item m0">{{ item.gift.price }} {{ item.gift.currency }}</h6>
+                        </div>
+                    </div>
+                    <div class="col s12 m3">
+                        <form class="p0 center" method="POST" action="{% url 'adjust_cart' item.id %}">
+                            {% csrf_token %}
+                            <div class="input-field">
+                                <input name="quantity" type="number" min="1" max="999" class="validate">
+                                <label for="quantity">Qty</label>
+                                <button class="waves-effect waves-light btn bg-button" type="submit"><i
+                                        class="material-icons right m0">add_shopping_cart</i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="row z-depth-3 white round-corner">
+            <div class="col s6">
+                <h6>Total:</h6>
+            </div>
+            <div class="col s6">
+                <h6 class="right-align">£ {{ total }}</h6>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="center-align pb20">
+                    <a class="waves-effect waves-light btn-large bg-button round-corner" href="{% url 'gifts' %}">Keep
+                        Shopping</a>
+                </div>
+            </div>
+            <div class="col s12 m6">
+                <div class="center-align">
+                    <a class="waves-effect waves-light btn-large bg-button round-corner" href="/">Checkout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

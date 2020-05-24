@@ -4,6 +4,14 @@ html {
     font-size: 18px;
 }
 
+.p0 {
+    padding: 0;
+}
+
+.m0 {
+    margin: 0;
+}
+
 .bold-text {
     font-weight: 700;
 }
@@ -29,6 +37,18 @@ a:hover {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+
+.pt25 {
+    padding-top: 25px;
+}
+
+.pb20 {
+    padding-bottom: 20px;
+}
+
+.min-h110 {
+    min-height: 110px !important;
 }
 
 /* Materiali override */
@@ -92,6 +112,28 @@ span.badge {
     border-radius: 50%;
 }
 
+.cart-gift-image {
+    width: 100px;
+    overflow: hidden;
+}
+
+.cart-gift-image img {
+    width: 100%;
+}
+
+i.right {
+    margin-left: 0;
+}
+
+.cart-center-item {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.input-field label {
+    text-align: center;
+}
+
 /* Content block */
 
 .section {
@@ -140,7 +182,6 @@ input[type=password]:focus, input[type=email]:focus, input[type=text]:focus, inp
 
 .quantity-input {
     max-width: 100px;
-    margin-right: 25px !important;
 }
 
 /* Subscribe section */
