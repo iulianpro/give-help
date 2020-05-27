@@ -1,7 +1,77 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 
 {% block content %}
 
-<p>Testing this page</p>
+<div class="slider">
+    <ul class="slides">
+        <li>
+            <img src="{% static 'img/callout_4.jpg' %}">
+            <div class="caption left-align">
+                <div class="transparent-box">
+                    <h4 class="light grey-text text-lighten-3">#NoiFacemUnSpital</h4>
+                    <h6 class="light grey-text text-lighten-3">(#WeBuildAHospital)</h6>
+                    <h6 class="light grey-text text-lighten-3">The First Pediatric Oncology, Radiotherapy and Trauma
+                        Hospital in Romania</h6>
+                </div>
+            </div>
+        </li>
+        <li>
+            <img src="{% static 'img/callout_5.jpg' %}">
+            <div class="caption right-align">
+                <div class="transparent-box">
+                    <h4 class="light grey-text text-lighten-3">#NoiFacemUnSpital</h4>
+                    <h6 class="light grey-text text-lighten-3">(#WeBuildAHospital)</h6>
+                    <h6 class="light grey-text text-lighten-3">Radiotherapy - two bunkers on the basement floor and the
+                        patient prep spaces</h6>
+                </div>
+            </div>
+        </li>
+        <li>
+            <img src="{% static 'img/callout_6.jpg' %}">
+            <div class="caption center-align">
+                <div class="transparent-box">
+                    <h4 class="light grey-text text-lighten-3">#NoiFacemUnSpital</h4>
+                    <h6 class="light grey-text text-lighten-3">(#WeBuildAHospital)</h6>
+                    <h6 class="light grey-text text-lighten-3">An Oncology department - day admission and continuous
+                        admission (ground floor and 1st floor)</h6>
+                </div>
+            </div>
+        </li>
+        <li>
+            <img src="{% static 'img/callout_2.jpg' %}">
+            <div class="caption left-align">
+                <div class="transparent-box">
+                    <h4 class="light grey-text text-lighten-3">#NoiFacemUnSpital</h4>
+                    <h6 class="light grey-text text-lighten-3">(#WeBuildAHospital)</h6>
+                    <h6 class="light grey-text text-lighten-3">A Hemato-Oncology department, with wards and 5 sterile
+                        rooms (3rd floor)</h6>
+                </div>
+            </div>
+        </li>
+        <li>
+            <img src="{% static 'img/callout_3.jpg' %}">
+            <div class="caption right-align">
+                <div class="transparent-box">
+                    <h4 class="light grey-text text-lighten-3">#NoiFacemUnSpital</h4>
+                    <h6 class="light grey-text text-lighten-3">(#WeBuildAHospital)</h6>
+                    <h6 class="light grey-text text-lighten-3">Space for a new MRI and a new CT, with enough room to
+                        anesthetize the young patients</h6>
+                </div>
+            </div>
+        </li>
+        <li>
+            <img src="{% static 'img/callout_1.jpg' %}">
+            <div class="caption center-align">
+                <div class="transparent-box">
+                    <h4 class="light grey-text text-lighten-3">#NoiFacemUnSpital</h4>
+                    <h6 class="light grey-text text-lighten-3">(#WeBuildAHospital)</h6>
+                    <h6 class="light grey-text text-lighten-3">An operating theatre with 7 operating rooms, dedicated
+                        leisure time spaces (cinema, library, etc)</h6>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
 
 {% endblock %}
