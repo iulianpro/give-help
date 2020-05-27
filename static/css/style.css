@@ -185,6 +185,10 @@ input[type=password]:focus, input[type=email]:focus, input[type=text]:focus, inp
     margin-right: 15px !important;
 }
 
+select {
+    display: block !important;
+}
+
 /* Subscribe section */
 
 .subscribe {
