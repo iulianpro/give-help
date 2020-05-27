@@ -64,7 +64,7 @@ i.material-icons.prefix {
 /* Navigation */
 
 nav.navbar-top {
-    background-color: #1049B3;
+    background-color: #ff4501;
     height: 35px;
     line-height: 35px;
     font-weight: 300;
@@ -256,12 +256,12 @@ i#prev {
 /* Footer */
 
 .footer {
-    background-color: #c5c5c5;
-    color: #3d3d3d;
+    background-color: #ff4501;
+    color: #f4f4f4;
 }
 
 .footer a {
-    color: #3d3d3d;
+    color: #f4f4f4;
 }
 
 /* Media query */
