@@ -53,6 +53,10 @@ a:hover {
 
 /* Materiali override */
 
+.main-heading i.material-icons {
+    margin-right: 10px;
+}
+
 i.material-icons.prefix {
     color: #FFAF02;
 }
@@ -195,14 +199,29 @@ select {
     padding: 10px;
 }
 
-.transparent-box h4,
-.main-heading h4 {
+.transparent-box h4, .main-heading h4 {
     font-size: 25px;
 }
 
-.transparent-box h6,
-.main-heading h6 {
+.transparent-box h6, .main-heading h6 {
     font-size: 20px;
+}
+
+.features-left {
+    padding-left: 0 20px;
+}
+
+.features-right {
+    padding-right: 0 20px;
+}
+
+.features-left h6, .features-right h6 {
+    color: #ff4501;
+    margin-bottom: 40px;
+}
+
+.features-right h6 {
+    margin-top: 40px;
 }
 
 /* Subscribe section */
@@ -244,13 +263,14 @@ select {
     .transparent-box {
         padding: 20px;
     }
-    .transparent-box h4,
-    .main-heading h4 {
+    .transparent-box h4, .main-heading h4 {
         font-size: 45px;
     }
-    .transparent-box h6,
-    .main-heading h6 {
+    .transparent-box h6, .main-heading h6 {
         font-size: 25px;
+    }
+    .features-left, .features-right {
+        padding: 0 65px;
     }
 }
 
@@ -271,8 +291,16 @@ select {
     .transparent-box {
         padding: 30px;
     }
-    .transparent-box h4,
-    .main-heading h4 {
+    .transparent-box h4, .main-heading h4 {
         font-size: 55px;
+    }
+    .features-left {
+        padding: 0 0 0 65px;
+    }
+    .features-right {
+        padding: 0 65px 0 0;
+    }
+    .features-right h6 {
+        margin-top: 9px;
     }
 }
