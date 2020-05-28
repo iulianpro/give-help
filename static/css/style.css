@@ -195,40 +195,14 @@ select {
     padding: 10px;
 }
 
-.transparent-box h4 {
+.transparent-box h4,
+.main-heading h4 {
     font-size: 25px;
 }
 
-.transparent-box h6 {
+.transparent-box h6,
+.main-heading h6 {
     font-size: 20px;
-}
-
-.row.slider-center {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-}
-
-i#next {
-    position: absolute;
-    right: 10px;
-    color: #fff;
-    background: #634e4e99;
-    font-size: 35px;
-    font-weight: 800;
-    border-radius: 50px;
-    border: 1px solid;
-}
-
-i#prev {
-    position: absolute;
-    left: 20px;
-    color: #fff;
-    background: #634e4e99;
-    font-size: 35px;
-    font-weight: 800;
-    border-radius: 50px;
-    border: 1px solid;
 }
 
 /* Subscribe section */
@@ -270,10 +244,12 @@ i#prev {
     .transparent-box {
         padding: 20px;
     }
-    .transparent-box h4 {
+    .transparent-box h4,
+    .main-heading h4 {
         font-size: 45px;
     }
-    .transparent-box h6 {
+    .transparent-box h6,
+    .main-heading h6 {
         font-size: 25px;
     }
 }
@@ -295,7 +271,8 @@ i#prev {
     .transparent-box {
         padding: 30px;
     }
-    .transparent-box h4 {
+    .transparent-box h4,
+    .main-heading h4 {
         font-size: 55px;
     }
 }
