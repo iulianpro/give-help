@@ -21,6 +21,7 @@ from gifts import urls as urls_gifts
 from cart import urls as urls_cart
 from checkout import urls as urls_checkout
 from gifts.views import all_gifts
+from subscribe.views import email_list_signup
 from django.views import static
 from .settings import MEDIA_ROOT
 
@@ -28,6 +29,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', index, name='index'),
     url(r'^shop/$', all_gifts, name='gifts'),
+    url(r'^subscribe/', email_list_signup, name='email_list_signup'),
     url(r'^accounts/', include(urls_accounts)),
     url(r'^shop/gifts', include(urls_gifts)),
     url(r'^cart/', include(urls_cart)),
