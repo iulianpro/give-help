@@ -78,8 +78,7 @@ ul.right {
     margin-right: 20px;
 }
 
-nav.navbar-top a,
-nav.navbar-top p {
+nav.navbar-top a, nav.navbar-top p {
     font-size: 14px;
 }
 
@@ -88,7 +87,7 @@ nav.navbar-top p {
 }
 
 .navbar-main .nav-wrapper {
-    box-shadow: 0 0 4px 0 rgba(0,0,0,0.55);
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.55);
 }
 
 .navbar-main a {
@@ -227,6 +226,14 @@ select {
 
 .features-right h6 {
     margin-top: 40px;
+}
+
+.index-link {
+    color: #ff4501;
+}
+
+.index-link:hover {
+    color: #dd9803;
 }
 
 /* Subscribe section */
