@@ -1,3 +1,12 @@
 from django import forms
+from .models import Signup
 
-# Create your forms here.
+
+class EmailSignupForm(forms.ModelForm):
+    email = forms.EmailField(widget=forms.TextInput(attrs={
+        "type": "email", "name": "email", "id": "email", "placeholder": "Email address",
+    }), label="")
+
+    class Meta:
+        model = Signup
+        fields = ('email', )
