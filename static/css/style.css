@@ -83,7 +83,11 @@ nav.navbar-top a {
 }
 
 .navbar-main {
-    background-color: #f9f9f9;
+    background-color: #eeeeee;
+}
+
+.navbar-main .nav-wrapper {
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.55);
 }
 
 .navbar-main a {
