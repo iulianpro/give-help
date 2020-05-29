@@ -295,12 +295,15 @@ select {
         font-size: 55px;
     }
     .features-left {
-        padding: 0 0 0 65px;
+        padding: 0 0 0 170px;
     }
     .features-right {
-        padding: 0 65px 0 0;
+        padding: 0 170px 0 0;
     }
     .features-right h6 {
         margin-top: 9px;
+    }
+    div.col.s12.l6.main-heading {
+        padding-top: 80px;
     }
 }
