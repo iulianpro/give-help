@@ -47,10 +47,6 @@ a:hover {
     min-height: 110px !important;
 }
 
-.navbar-top .left {
-    margin-left: 20px;
-}
-
 /* Materiali override */
 
 .dropdown-content li {
@@ -77,6 +73,29 @@ i.material-icons.prefix {
 
 .material-icons.prefix.active {
     color: #dd9803;
+}
+
+.side-nav {
+    width: 250px;
+    background-color: #f9f9f9;
+}
+
+.navbar-top .left, .navbar-main .left {
+    margin-left: 20px;
+}
+
+.navbar-main a.brand-logo {
+    font-weight: 500;
+    color: #ff4501;
+}
+
+i.fas.fa-globe {
+    margin-top: 15px;
+}
+
+.side-nav li>a, .side-nav li>a>i.material-icons {
+    font-weight: 400;
+    color: #ff4501;
 }
 
 /* Navigation */
@@ -307,6 +326,9 @@ select {
     }
     .subscribe-button {
         text-align: right;
+    }
+    i.fas.fa-globe {
+        margin-top: 0;
     }
 }
 

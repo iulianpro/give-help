@@ -25,8 +25,10 @@
 </nav>
 <nav class="navbar-main">
     <div class="nav-wrapper">
-        <a href="" class="brand-logo"></a>
-        <a href="" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        <div class="left">
+            <a href="/" class="brand-logo"><i class="fas fa-globe"></i> Give Help</a>
+            <a href="" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        </div>
         <ul class="right">
             <li><a class=" hide-on-med-and-down" href="/">Home</a></li>
             <li><a class=" hide-on-med-and-down" href="">Donate</a></li>
@@ -44,7 +46,7 @@
         <ul class="side-nav" id="mobile">
             <li><a href="/">Home</a></li>
             <li><a href="">Donate</a></li>
-            <li><a href="{% url 'gifts' %}">Shop</a></li>
+            <li><a href="{% url 'gifts' %}">Gifts</a></li>
             <li>
                 <a href="{% url 'view_cart' %}">
                     <i class="material-icons">shopping_cart</i>
@@ -57,7 +59,7 @@
                 <div class="divider"></div>
             </li>
             {% if user.is_authenticated %}
-            <li><a href="{% url 'view_profile' %}">{{ user.first_name }}'s account</a></li>
+            <li><a href="{% url 'view_profile' %}">My account</a></li>
             <li><a href="{% url 'logout' %}">Logout</a></li>
             {% else %}
             <li><a href="{% url 'registration' %}">Register</a></li>
