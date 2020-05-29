@@ -53,6 +53,20 @@ a:hover {
 
 /* Materiali override */
 
+.dropdown-content li {
+    min-height: 35px !important;
+    background-color: #ff4501;
+}
+
+.dropdown-content li:hover {
+    background-color: #ff4501;
+}
+
+.dropdown-content li>a {
+    line-height: 35px;
+    padding: 0 15px;
+}
+
 .main-heading i.material-icons {
     margin-right: 10px;
 }

@@ -6,9 +6,14 @@
                     aria-label="Visit give life dot ro" rel="noopener">daruiesteviata.ro</a> support</p>
         </div>
         <ul class="right">
-            <li><a class="white-text" href="{% url 'gifts' %}">Shop</a></li>
+            <li><a class="white-text" href="{% url 'gifts' %}">Ghifts</a></li>
             {% if user.is_authenticated %}
-            <li><a class="white-text" href="{% url 'view_profile' %}">{{ user.first_name }}'s account</a></li>
+            <ul id="dropdown" class="dropdown-content">
+                <li><a class="white-text">{{ user.first_name }}'s account</a></li>
+                <li><a class="white-text" href="{% url 'view_profile' %}">View profile</a></li>
+                <li><a class="white-text" href="{% url 'edit_profile' %}">Edit profile</a></li>
+            </ul>
+            <li><a class="dropdown-button" href="" data-activates="dropdown">{{ user.first_name }}'s account</a></li>
             <li><a class="white-text" href="{% url 'logout' %}">Logout</a></li>
             {% else %}
             <li><a class="white-text" href="{% url 'registration' %}">Register</a></li>
