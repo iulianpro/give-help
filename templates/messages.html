@@ -1,0 +1,17 @@
+{% if messages %}
+{% for message in messages %}
+{% if message.tags %}
+<script>
+    $(document).ready(function () {
+        $.toast({
+            text: '{{ message }}',
+            position: 'top-center',
+            textAlign: 'center',
+            icon: '{{ message.tags }}',
+            hideAfter: 3000
+        });
+    });
+</script>
+{% endif %}
+{% endfor %}
+{% endif %}

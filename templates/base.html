@@ -17,136 +17,16 @@
 
 <body>
 
-    <nav class="navbar-top hide-on-med-and-down">
-        <div class="nav-wrapper">
-            <ul class="right">
-                <li><a class="white-text" href="{% url 'gifts' %}">Shop</a></li>
-                {% if user.is_authenticated %}
-                <li><a class="white-text" href="{% url 'view_profile' %}">{{ user.first_name }}'s account</a></li>
-                <li><a class="white-text" href="{% url 'logout' %}">Logout</a></li>
-                {% else %}
-                <li><a class="white-text" href="{% url 'registration' %}">Register</a></li>
-                <li><a class="white-text" href="{% url 'login' %}">Login</a></li>
-                {% endif %}
-                <li><a class="white-text" href="">Search</a></li>
-            </ul>
-        </div>
-    </nav>
-    <nav class="navbar-main">
-        <div class="nav-wrapper">
-            <a href="" class="brand-logo"></a>
-            <a href="" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-            <ul class="right">
-                <li><a class=" hide-on-med-and-down" href="/">Home</a></li>
-                <li><a class=" hide-on-med-and-down" href="">Donate</a></li>
-                <li><a class=" hide-on-med-and-down" href="">Gallery</a></li>
-                <li><a class=" hide-on-med-and-down" href="">About</a></li>
-                <li>
-                    <a href="{% url 'view_cart' %}">
-                        <i class="material-icons">shopping_cart</i>
-                        {% if gift_count > 0 %}
-                        <span class="white-text badge red">{{gift_count}}</span>
-                        {% endif %}
-                    </a>
-                </li>
-            </ul>
-            <ul class="side-nav" id="mobile">
-                <li><a href="/">Home</a></li>
-                <li><a href="">Donate</a></li>
-                <li><a href="{% url 'gifts' %}">Shop</a></li>
-                <li>
-                    <a href="{% url 'view_cart' %}">
-                        <i class="material-icons">shopping_cart</i>
-                        {% if gift_count > 0 %}
-                        <span class="white-text badge red">{{gift_count}}</span>
-                        {% endif %}
-                    </a>
-                </li>
-                <li>
-                    <div class="divider"></div>
-                </li>
-                {% if user.is_authenticated %}
-                <li><a href="{% url 'view_profile' %}">{{ user.first_name }}'s account</a></li>
-                <li><a href="{% url 'logout' %}">Logout</a></li>
-                {% else %}
-                <li><a href="{% url 'registration' %}">Register</a></li>
-                <li><a href="{% url 'login' %}">Login</a></li>
-                {% endif %}
-                <li><a href="">Gallery</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Search</a></li>
-            </ul>
-        </div>
-    </nav>
+    {% include 'navbar.html' %}
 
-    {% if messages %}
-    {% for message in messages %}
-    {% if message.tags %}
-    <script>
-        $(document).ready(function () {
-            $.toast({
-                text: '{{ message }}',
-                position: 'top-center',
-                textAlign: 'center',
-                icon: '{{ message.tags }}',
-                hideAfter: 3000
-            });
-        });
-    </script>
-    {% endif %}
-    {% endfor %}
-    {% endif %}
+    {% include 'messages.html' %}
 
     {% block content %}{% endblock %}
 
-    <section class="subscribe">
-        <div class="parallax-container">
-            <div class="parallax">
-                <img class="subscribe-image-bg" src="{% static 'img/subscribe-bg.jpg' %}">
-            </div>
-        </div>
-        <div class="subscribe-content">
-            <p class="subscribe-content-text">Test subscribe text</p>
-        </div>
-    </section>
+    {% include 'subscribe.html' %}
 
-    <footer class="page-footer footer">
-        <div class="container">
-            <div class="row">
-                <div class="col m6 s12 center-align">
-                    <h5>Content</h5>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                        Ratione, explicabo perspiciatis? Commodi porro nulla sit reiciendis magni natus, perferendis
-                        libero.</p>
-                </div>
-                <div class="col m3 s12 center-align">
-                    <h5>Links</h5>
-                    <ul>
-                        <li><a href="">Link 1</a></li>
-                        <li><a href="">Link 2</a></li>
-                        <li><a href="">Link 3</a></li>
-                        <li><a href="">Link 4</a></li>
-                    </ul>
-                </div>
-                <div class="col m3 s12 center-align">
-                    <h5>Links</h5>
-                    <ul>
-                        <li><a href="">Link 1</a></li>
-                        <li><a href="">Link 2</a></li>
-                        <li><a href="">Link 3</a></li>
-                        <li><a href="">Link 4</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer-copyright">
-            <div class="container center-align white-text text-darken-3">
-                © May 2020. This website was created for educational purposes! Do not use real credit cards.
-            </div>
-        </div>
-    </footer>
-
-
+    {% include 'footer.html' %}
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script src="{% static 'toasts/js/jquerytoast.js' %}"></script>
     <script src="{% static 'js/script.js' %}"></script>
