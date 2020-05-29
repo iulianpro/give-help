@@ -30,7 +30,27 @@
             </div>
         </div>
         <div class="subscribe-content">
-            <p class="subscribe-content-text">Test subscribe text</p>
+            <div class="row m0">
+                <div class="col">
+                    <h4 class="center-align pb20">Signup to our newsletter to keep up to date with our story</h4>
+                </div>
+            </div>
+            <div class="row m0">
+                <form method="POST" action="{% url 'email_list_signup' %}">
+                    {% csrf_token %}
+                    <div class="col s12 m6">
+                        <div class="center-align">
+                            {{ subscribe_form }}
+                        </div>
+                    </div>
+                    <div class="col s12 m6">
+                        <div class="right-align">
+                            <button class="waves-effect waves-light btn-large bg-button round-corner"
+                                type="submit">Subsribe</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
 
