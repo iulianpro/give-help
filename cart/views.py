@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect, reverse
+from subscribe.forms import EmailSignupForm
 
 
 def view_cart(request):
-    return render(request, "cart.html")
+    subscribe_form = EmailSignupForm()
+    return render(request, "cart.html", {'subscribe_form': subscribe_form})
 
 
 def add_to_cart(request, id):
