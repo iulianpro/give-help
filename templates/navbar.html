@@ -1,5 +1,10 @@
 <nav class="navbar-top hide-on-med-and-down">
     <div class="nav-wrapper">
+        <div class="left">
+            <p class="brand-logo m0">This website was created only for educational propose with <a
+                    href="https://www.daruiesteviata.ro/proiecte" target="_blank" title="Visit Daruieste Viata"
+                    aria-label="Visit give life dot ro" rel="noopener">daruiesteviata.ro</a> support</p>
+        </div>
         <ul class="right">
             <li><a class="white-text" href="{% url 'gifts' %}">Shop</a></li>
             {% if user.is_authenticated %}

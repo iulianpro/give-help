@@ -16,12 +16,8 @@ html {
     font-weight: 700;
 }
 
-a {
-    color: #1049B3;
-}
-
 a:hover {
-    color: #022463;
+    color: #ffffff;
 }
 
 .round-corner {
@@ -51,6 +47,10 @@ a:hover {
     min-height: 110px !important;
 }
 
+.navbar-top .left {
+    margin-left: 20px;
+}
+
 /* Materiali override */
 
 .main-heading i.material-icons {
@@ -78,7 +78,8 @@ ul.right {
     margin-right: 20px;
 }
 
-nav.navbar-top a {
+nav.navbar-top a,
+nav.navbar-top p {
     font-size: 14px;
 }
 
