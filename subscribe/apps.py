@@ -1,3 +1,5 @@
 from django.apps import AppConfig
 
-# Create your config here.
+
+class SubscribeConfig(AppConfig):
+    name = 'subscribe'
