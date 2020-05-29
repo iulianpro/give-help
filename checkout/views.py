@@ -7,6 +7,7 @@ from django.conf import settings
 from django.utils import timezone
 from gifts.models import Gift
 import stripe
+from subscribe.forms import EmailSignupForm
 
 
 stripe.api_key = settings.STRIPE_SECRET
@@ -14,6 +15,8 @@ stripe.api_key = settings.STRIPE_SECRET
 
 @login_required()
 def checkout(request):
+    subscribe_form = EmailSignupForm()
+
     if request.method == "POST":
         order_form = OrderForm(request.POST)
         payment_form = MakePaymentForm(request.POST)
@@ -60,4 +63,4 @@ def checkout(request):
         payment_form = MakePaymentForm()
         order_form = OrderForm()
 
-    return render(request, "checkout.html", {"order_form": order_form, "payment_form": payment_form, "publishable": settings.STRIPE_PUBLISHABLE})
+    return render(request, "checkout.html", {"order_form": order_form, "payment_form": payment_form, "publishable": settings.STRIPE_PUBLISHABLE, 'subscribe_form': subscribe_form})
