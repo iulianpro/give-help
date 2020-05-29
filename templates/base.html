@@ -23,14 +23,23 @@
 
     {% block content %}{% endblock %}
 
-    {% include 'subscribe.html' %}
+    <section class="subscribe">
+        <div class="parallax-container">
+            <div class="parallax">
+                <img class="subscribe-image-bg" src="{% static 'img/subscribe-bg.jpg' %}">
+            </div>
+        </div>
+        <div class="subscribe-content">
+            <p class="subscribe-content-text">Test subscribe text</p>
+        </div>
+    </section>
 
     {% autoescape off %}
     {{ features}}
     {% endautoescape %}
 
     {% include 'footer.html' %}
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script src="{% static 'toasts/js/jquerytoast.js' %}"></script>
     <script src="{% static 'js/script.js' %}"></script>
