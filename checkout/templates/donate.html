@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% load static from staticfiles %}
+
+{% block head_js %}
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<script type="text/javascript">
+    //<![CDATA[
+    Stripe.publishableKey = '{{ publishable }}';
+    //]]>
+</script>
+<script type="text/javascript" src="{% static 'js/stripe.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+
+<div class="section">
+    <div class="row">
+        <div class="col s12">
+            <h4 class="center-align">Get involved, donate!</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 center-align">
+            <img src="{% static 'img/donate-teaser.jpg' %}" alt="Get envolve, donate">
+        </div>
+    </div>
+    <div class="container">
+        <form role="form" method="post" id="payment-form" action="{% url 'donate' %}">
+            {% csrf_token %}
+            <div class="row z-depth-3 white round-corner pb20 pt20">
+                <div class="col s12 m6 offset-m3">
+                    <div class="profile-card">
+                        {% for field in donate_form %}
+                        <div class="input-field">
+                            {{ field.label_tag }}
+                            {{ field }}
+                            {% if field.help_text %}
+                            <p class="form-help-text">{{ field.help_text }}</p>
+                            {% endif %}
+                            {% for error in field.errors %}
+                            <p class="form-error-text">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="row z-depth-3 white round-corner pb20 pt20">
+                <div class="col s12 m6 offset-m3">
+                    {{ payment_form }}
+                </div>
+            </div>
+            <div id="credit-card-errors" style="display: none;">
+                <div class="form-error-text pb20" id="stripe-error-message"></div>
+            </div>
+            <div class="col s12 m6">
+                <div class="center-align">
+                    <input class="waves-effect waves-light btn-large bg-button round-corner" id="submit_payment_btn"
+                        name="commit" type="submit" value="Submit Donation">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
