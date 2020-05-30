@@ -22,7 +22,9 @@
     </div>
     <div class="row">
         <div class="col s12 center-align">
-            <img src="{% static 'img/donate-teaser.jpg' %}" alt="Get envolve, donate">
+            <div class="donate-teaser">
+                <img src="{% static 'img/donate-teaser.jpg' %}" alt="Get envolve, donate">
+            </div>
         </div>
     </div>
     <div class="container">
@@ -48,7 +50,9 @@
             </div>
             <div class="row z-depth-3 white round-corner pb20 pt20">
                 <div class="col s12 m6 offset-m3">
-                    {{ payment_form }}
+                    <div class="profile-card">
+                        {{ payment_form }}
+                    </div>
                 </div>
             </div>
             <div id="credit-card-errors" style="display: none;">
