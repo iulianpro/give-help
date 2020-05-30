@@ -32,7 +32,7 @@
         <ul class="right">
             <li><a class=" hide-on-med-and-down" href="/">Home</a></li>
             <li><a class=" hide-on-med-and-down" href="">Donate</a></li>
-            <li><a class=" hide-on-med-and-down" href="">Gallery</a></li>
+            <li><a class=" hide-on-med-and-down" href="{% url 'gallery' %}">Gallery</a></li>
             <li><a class=" hide-on-med-and-down" href="">About</a></li>
             <li>
                 <a href="{% url 'view_cart' %}">
@@ -65,7 +65,7 @@
             <li><a href="{% url 'registration' %}">Register</a></li>
             <li><a href="{% url 'login' %}">Login</a></li>
             {% endif %}
-            <li><a href="">Gallery</a></li>
+            <li><a href="{% url 'gallery' %}">Gallery</a></li>
             <li><a href="">About</a></li>
             <li><a href="">Search</a></li>
         </ul>
