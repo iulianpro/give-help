@@ -31,10 +31,7 @@
         </div>
         <form role="form" method="post" id="payment-form" action="{% url 'checkout' %}">
             {% csrf_token %}
-            <div id="credit-card-errors" style="display: none;">
-                <div class="alert-message block-message error" id="stripe-error-message"></div>
-            </div>
-            <div class="row z-depth-3 white round-corner">
+            <div class="row z-depth-3 white round-corner pb20 pt20">
                 <div class="col s12 m6 offset-m3">
                     <div class="profile-card">
                         {% for field in order_form %}
@@ -52,10 +49,13 @@
                     </div>
                 </div>
             </div>
-            <div class="row z-depth-3 white round-corner">
+            <div class="row z-depth-3 white round-corner pb20 pt20">
                 <div class="col s12 m6 offset-m3">
                     {{ payment_form }}
                 </div>
+            </div>
+            <div id="credit-card-errors" style="display: none;">
+                <div class="form-error-text pb20" id="stripe-error-message"></div>
             </div>
             <div class="col s12 m6">
                 <div class="center-align">
