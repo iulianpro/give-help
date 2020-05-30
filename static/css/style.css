@@ -43,6 +43,10 @@ a:hover {
     padding-bottom: 20px;
 }
 
+.pt20 {
+    padding-top: 20px;
+}
+
 .min-h110 {
     min-height: 110px !important;
 }

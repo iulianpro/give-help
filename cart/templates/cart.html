@@ -10,7 +10,8 @@
                 <h4 class="center-align">Gifts basket</h4>
             </div>
         </div>
-        <div class="row z-depth-3 white round-corner pb20">
+        <div class="row z-depth-3 white round-corner pb20 pt20">
+            {% if total > 0 %}
             {% for item in cart_items %}
             <div class="col s12">
                 <div class="rox pt25">
@@ -43,6 +44,9 @@
                 </div>
             </div>
             {% endfor %}
+            {% else %}
+            <h6 class="center-align">Your basket is empty</h6>
+            {% endif %}
         </div>
         <div class="row z-depth-3 white round-corner">
             <div class="col s6">
@@ -61,7 +65,12 @@
             </div>
             <div class="col s12 m6">
                 <div class="center-align">
-                    <a class="waves-effect waves-light btn-large bg-button round-corner" href="{% url 'checkout' %}">Checkout</a>
+                    {% if total > 0 %}
+                    <a class="waves-effect waves-light btn-large bg-button round-corner"
+                        href="{% url 'checkout' %}">Checkout</a>
+                    {% else %}
+                    <a class="waves-effect waves-light btn-large bg-button round-corner">Checkout</a>
+                    {% endif %}
                 </div>
             </div>
         </div>
