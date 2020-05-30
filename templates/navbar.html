@@ -31,7 +31,7 @@
         </div>
         <ul class="right">
             <li><a class=" hide-on-med-and-down" href="/">Home</a></li>
-            <li><a class=" hide-on-med-and-down" href="">Donate</a></li>
+            <li><a class=" hide-on-med-and-down" href="{% url 'donate' %}">Donate</a></li>
             <li><a class=" hide-on-med-and-down" href="{% url 'gallery' %}">Gallery</a></li>
             <li><a class=" hide-on-med-and-down" href="">About</a></li>
             <li>
@@ -45,7 +45,7 @@
         </ul>
         <ul class="side-nav" id="mobile">
             <li><a href="/">Home</a></li>
-            <li><a href="">Donate</a></li>
+            <li><a href="{% url 'donate' %}">Donate</a></li>
             <li><a href="{% url 'gifts' %}">Gifts</a></li>
             <li>
                 <a href="{% url 'view_cart' %}">
