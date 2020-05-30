@@ -1,5 +1,6 @@
 from django.db import models
 from gifts.models import Gift
+from django.core.validators import MaxValueValidator, MinValueValidator
 
 
 class Order(models.Model):
@@ -15,6 +16,16 @@ class Order(models.Model):
 
     def __str__(self):
         return "Order id {0} | {1} | {2}".format(self.id, self.full_name, self.date)
+
+
+class Donate(models.Model):
+    full_name = models.CharField(max_length=50, blank=False, default='')
+    country = models.CharField(max_length=40, blank=False, default='')
+    total = models.IntegerField(default=10, validators=[
+                                MaxValueValidator(1000), MinValueValidator(10)])
+
+    def __str__(self):
+        return "{0} - {1} £".format(self.full_name, self.total)
 
 
 class OrderLineItem(models.Model):
