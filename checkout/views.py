@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from .forms import MakePaymentForm, OrderForm
+from .forms import MakePaymentForm, OrderForm, DonateForm
 from .models import OrderLineItem
 from django.conf import settings
 from django.utils import timezone
@@ -64,3 +64,41 @@ def checkout(request):
         order_form = OrderForm()
 
     return render(request, "checkout.html", {"order_form": order_form, "payment_form": payment_form, "publishable": settings.STRIPE_PUBLISHABLE, 'subscribe_form': subscribe_form})
+
+
+def donate(request):
+    subscribe_form = EmailSignupForm()
+
+    if request.method == "POST":
+        donate_form = DonateForm(request.POST)
+        payment_form = MakePaymentForm(request.POST)
+
+        if donate_form.is_valid() and payment_form.is_valid():
+            donate = donate_form.save(commit=False)
+            donate.save()
+
+            try:
+                customer = stripe.Charge.create(
+                    amount=int(donate.total * 100),
+                    currency="GBP",
+                    description=request.user.email,
+                    card=payment_form.cleaned_data['stripe_id']
+                )
+            except stripe.error.CardError:
+                messages.error(request, "Your bank declined this card!")
+
+            if customer.paid:
+                messages.success(request, "You successfully donated!")
+                return redirect(reverse('index'))
+            else:
+                messages.error(
+                    request, "Something went wrong, please try again later")
+        else:
+            print(payment_form.errors)
+            messages.error(
+                request, "Something went wrong with that card!")
+    else:
+        payment_form = MakePaymentForm()
+        donate_form = DonateForm()
+
+    return render(request, "donate.html", {"donate_form": donate_form, "payment_form": payment_form, "publishable": settings.STRIPE_PUBLISHABLE, 'subscribe_form': subscribe_form})
