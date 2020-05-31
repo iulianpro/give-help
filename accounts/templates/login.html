@@ -14,7 +14,9 @@
                     <div class="col s12">
                         <form method="POST" class="center-align">
                             {% csrf_token %}
-                            {{ login_form }}
+                            {% for field in login_form %}
+                            {{ field }}
+                            {% endfor %}
                             <button class="waves-effect waves-light btn-large bg-button round-corner"
                                 type="submit">Login</button>
                         </form>
