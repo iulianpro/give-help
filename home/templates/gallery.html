@@ -8,7 +8,9 @@
         <div class="row">
             {% for image in images %}
             <div class="col s12 m6 l4">
-                <img class="materialboxed pb20" width="100%" height="auto" src="{{ MEDIA_URL }}{{ image.image }}" alt="project images {{ image.image }}">
+                <div class="donate-teaser">
+                    <img class="materialboxed pb20" src="{{ MEDIA_URL }}{{ image.image }}" alt="project image">
+                </div>
             </div>
             {% endfor %}
         </div>
