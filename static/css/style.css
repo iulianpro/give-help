@@ -248,14 +248,6 @@ select {
     font-size: 20px;
 }
 
-.features-left {
-    padding-left: 0 20px;
-}
-
-.features-right {
-    padding-right: 0 20px;
-}
-
 .features-left h6, .features-right h6 {
     color: #ff4501;
     margin-bottom: 40px;
