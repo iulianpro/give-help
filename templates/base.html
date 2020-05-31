@@ -41,7 +41,9 @@
                     {% csrf_token %}
                     <div class="col s12 m6">
                         <div class="center-align">
-                            {{ subscribe_form }}
+                            {% for field in subscribe_form %}
+                            {{ field }}
+                            {% endfor %}
                         </div>
                     </div>
                     <div class="col s12 m6">

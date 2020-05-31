@@ -4,7 +4,7 @@ from .models import Signup
 
 class EmailSignupForm(forms.ModelForm):
     email = forms.EmailField(widget=forms.TextInput(attrs={
-        "type": "email", "name": "email", "id": "email", "placeholder": "Email address",
+        "type": "email", "id": "email", "placeholder": "Email address",
     }), label="")
 
     class Meta:
