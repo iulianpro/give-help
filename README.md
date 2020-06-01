@@ -163,7 +163,7 @@ To run my code locally, users can download a local copy of my code to their desk
 ``python manage.py migrate``
 ``python manage.py createsuperuser``
 * **N)** In the heroku dashboard for the application, click on "Settings" > "Reveal Config Vars".
-* **O)** Set the following config vars in heroku:
+* **O)** Set the following config vars in Heroku:
 
 ![VAR](https://myfirst-ecommerce.s3.eu-west-2.amazonaws.com/static/img/var.png)
 
@@ -174,9 +174,14 @@ Once the migrations are completed and the super user has been created successful
 
 > ## Credits
 
-### Content
-### Media
+### Content/Media
+The entire content of this website, text, images, story, gifts in the online store, were used with the consent of the Association Daruieste Viata (Give Life), a non-governmental organization in Romania that created, managed and will complete this wonderful project, that of give children with cancer a chance at normal life, a hope, a future. Read the whole story on the website of the [NGO Daruieste Viata](https://www.daruiesteviata.ro/), also, any contribution made on the website Daruieste Viata, is welcome for which we thank you.
+
 ### Acknowledgements
+In the end I would like to thank the Code Institute for this exciting adventure. I learned many, many things but of course, this is just the beginning. I fell in love with the Python programming language and especially with Django, which I will definitely delve into it in the future.
+
+I would like to thank [Matt Rudge](https://github.com/lechien73), Senior Product Developer, the courses presented were absolutely sensational. I would also like to thank the colleagues with whom I had discussions on the Slack channels, from where I also had to learn. And last but not least, I thank my mentor [Simen Daehlin](https://github.com/Eventyret).
+
 ### ![#2b4438](https://placehold.it/800x20/ffffff/ffffff) [⬆](https://github.com/iulianpro/give-help#table-of-contents)
 
 *This website was created for educational purposes, June 2020.*
