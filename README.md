@@ -54,8 +54,17 @@ We wanted this project to be a platform that facilitates the satisfaction of the
 The main purpose is to facilitate the connection between a non-governmental organization, a non-profit association and potential users who can get involved in supporting the cause through direct or indirect donations.
 
 ### Structure
+As a structure, I could say that the website has three major components, a component through which the user can make a donation. A second component is the management of personal data by creating an account. A third component is the story of this campaign created by Asiciatia Daruieste Viata din Romania.
+
 ### Skeleton
+The three components mentioned above can in turn be divided into several functionalities. A component through which the user can make a donation both through a payment with a credit card and through the purchase of gifts from the online store. A second component is the management of personal data by creating an account. The user is thus able to register his personal data, to modify them, to be able to make a request to reset the access password. A third component is the story of this campaign created by Asiciatia Daruieste Viata din Romania, the user can find out details about the project, view photos, access external resources where they can find more information, subscribe to a newslatter to be up to date with the evolution of the campaign.
+
 ### Surface
+The color palette used in the design of this website was determined with Adobe Color and is not accidental, using the color gray, which symbolizes less pleasant things, suffering in the case of small beneficiaries of this cause, and inserts of strong shades of yellow and orange that suggest hope, the sun and its healing power.
+
+* ![#f9f9f9](https://placehold.it/75x20/f9f9f9/f9f9f9) #f9f9f9
+* ![#ff4501](https://placehold.it/75x20/ff4501/ff4501) #ff4501
+* ![#ffaf02](https://placehold.it/75x20/ffaf02/ffaf02) #ffaf02
 ### ![#2b4438](https://placehold.it/800x20/ffffff/ffffff) [⬆](https://github.com/iulianpro/give-help#table-of-contents)
 
 
