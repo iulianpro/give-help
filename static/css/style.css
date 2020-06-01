@@ -28,7 +28,7 @@ a:hover {
 }
 
 .round-corner {
-    border-radius: 15px;
+    border-radius: 0.9375rem;
 }
 
 .hide {
@@ -50,15 +50,15 @@ a:hover {
 }
 
 .pt25 {
-    padding-top: 25px;
+    padding-top: 1.5625rem;
 }
 
 .pb20 {
-    padding-bottom: 20px;
+    padding-bottom: 1.25rem;
 }
 
 .pt20 {
-    padding-top: 20px;
+    padding-top: 1.25rem;
 }
 
 .min-h110 {
@@ -78,11 +78,11 @@ a:hover {
 
 .dropdown-content li>a {
     line-height: 35px;
-    padding: 0 15px;
+    padding: 0 0.9375rem;
 }
 
 .main-heading i.material-icons {
-    margin-right: 10px;
+    margin-right: 0.625rem;
 }
 
 i.material-icons.prefix {
@@ -99,7 +99,7 @@ i.material-icons.prefix {
 }
 
 .navbar-top .left, .navbar-main .left {
-    margin-left: 20px;
+    margin-left: 1.25rem;
 }
 
 .navbar-main a.brand-logo {
@@ -108,7 +108,7 @@ i.material-icons.prefix {
 }
 
 i.fas.fa-globe {
-    margin-top: 15px;
+    margin-top: 0.625rem;
 }
 
 .side-nav li>a, .side-nav li>a>i.material-icons {
@@ -126,11 +126,11 @@ nav.navbar-top {
 }
 
 ul.right {
-    margin-right: 20px;
+    margin-right: 1.25rem;
 }
 
 nav.navbar-top a, nav.navbar-top p {
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 .navbar-main {
@@ -144,7 +144,7 @@ nav.navbar-top a, nav.navbar-top p {
 
 .navbar-main a {
     color: #3d3d3d;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 300;
 }
 
@@ -158,7 +158,7 @@ i.material-icons {
 }
 
 nav ul a span.badge {
-    margin-left: -2px;
+    margin-left: -0.125rem;
     -webkit-transform: translate(-5px, -2px);
     -ms-transform: translate(-5px, -2px);
     transform: translate(-5px, -2px);
@@ -206,7 +206,7 @@ i.right {
 }
 
 form {
-    padding: 20px 5px;
+    padding: 1.25rem 0.3125rem;
 }
 
 .form-gift {
@@ -214,27 +214,27 @@ form {
 }
 
 .profile-card {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
     font-weight: 300;
 }
 
 .form-help-text {
-    font-size: 14px;
+    font-size: 0.875rem;
     font-style: italic;
     color: #696969;
 }
 
 .form-error-text {
-    font-size: 14px;
+    font-size: 0.875rem;
     font-style: italic;
     color: #ff0000;
 }
 
 input[type=password]:focus, input[type=email]:focus, input[type=text]:focus, input[type=number]:focus {
-    border-bottom: 1px solid #FFAF02 !important;
-    -webkit-box-shadow: 0 1px 0 0 #FFAF02 !important;
-    box-shadow: 0 1px 0 0 #FFAF02 !important;
+    border-bottom: 0.0625rem solid #FFAF02 !important;
+    -webkit-box-shadow: 0 0.0625rem 0 0 #FFAF02 !important;
+    box-shadow: 0 0.0625rem 0 0 #FFAF02 !important;
 }
 
 .bg-button {
@@ -247,7 +247,7 @@ input[type=password]:focus, input[type=email]:focus, input[type=text]:focus, inp
 
 .quantity-input {
     max-width: 100px;
-    margin-right: 15px !important;
+    margin-right: 0.9375rem !important;
 }
 
 select {
@@ -257,32 +257,32 @@ select {
 .transparent-box {
     background-color: #000000;
     opacity: 65%;
-    padding: 10px;
+    padding: 0.625rem;
 }
 
 .transparent-box h4, .main-heading h4, .subscribe-content h4 {
-    font-size: 25px;
+    font-size: 1.5625rem;
 }
 
 .transparent-box h6, .main-heading h6 {
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .features-left {
-    padding-left: 20px;
+    padding-left: 1.25rem;
 }
 
 .features-right {
-    padding-right: 20px;
+    padding-right: 1.25rem;
 }
 
 .features-left h6, .features-right h6 {
     color: #ff4501;
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
 }
 
 .features-right h6 {
-    margin-top: 40px;
+    margin-top: 2.5rem;
 }
 
 .index-link {
@@ -319,7 +319,7 @@ select {
 }
 
 .subscribe-content-text {
-    font-size: 50px;
+    font-size: 3.125rem;
 }
 
 .subscribe-content input[type=email] {
@@ -341,16 +341,16 @@ select {
 
 @media (min-width: 601px) {
     .transparent-box {
-        padding: 20px;
+        padding: 1.25rem;
     }
     .transparent-box h4, .main-heading h4, .subscribe-content h4 {
-        font-size: 45px;
+        font-size: 2.8125rem;
     }
     .transparent-box h6, .main-heading h6 {
-        font-size: 25px;
+        font-size: 1.5625rem;
     }
     .features-left, .features-right {
-        padding: 0 65px;
+        padding: 0 4.0625rem;
     }
     .subscribe-content input[type=email] {
         text-align: left !important;
@@ -371,28 +371,28 @@ select {
         margin-top: 30%;
     }
     form {
-        padding: 30px;
+        padding: 1.875rem;
     }
     .profile-card {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
     }
     .transparent-box {
-        padding: 30px;
+        padding: 1.875rem;
     }
     .transparent-box h4, .main-heading h4, .subscribe-content h4 {
-        font-size: 55px;
+        font-size: 3.4375rem;
     }
     .features-left {
-        padding: 0 0 0 170px;
+        padding: 0 0 0 10.625rem;
     }
     .features-right {
-        padding: 0 170px 0 0;
+        padding: 0 10.625rem 0 0;
     }
     .features-right h6 {
-        margin-top: 9px;
+        margin-top: 0.5625rem;
     }
     div.col.s12.l6.main-heading {
-        padding-top: 80px;
+        padding-top: 5rem;
     }
 }
