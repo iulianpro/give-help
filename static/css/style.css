@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 /* General */
 
 html {
@@ -29,9 +36,16 @@ a:hover {
 }
 
 .flex-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -124,6 +138,7 @@ nav.navbar-top a, nav.navbar-top p {
 }
 
 .navbar-main .nav-wrapper {
+    -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.55);
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.55);
 }
 
@@ -144,10 +159,14 @@ i.material-icons {
 
 nav ul a span.badge {
     margin-left: -2px;
+    -webkit-transform: translate(-5px, -2px);
+    -ms-transform: translate(-5px, -2px);
     transform: translate(-5px, -2px);
 }
 
 .side-nav span.badge {
+    -webkit-transform: translate(0, -2px);
+    -ms-transform: translate(0, -2px);
     transform: translate(0, -2px);
 }
 
@@ -214,6 +233,7 @@ form {
 
 input[type=password]:focus, input[type=email]:focus, input[type=text]:focus, input[type=number]:focus {
     border-bottom: 1px solid #FFAF02 !important;
+    -webkit-box-shadow: 0 1px 0 0 #FFAF02 !important;
     box-shadow: 0 1px 0 0 #FFAF02 !important;
 }
 
@@ -284,6 +304,7 @@ select {
 }
 
 .subscribe-image-bg {
+    -webkit-filter: blur(4px);
     filter: blur(4px);
 }
 
@@ -291,6 +312,8 @@ select {
     position: absolute;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     color: #ffffff;
 }
