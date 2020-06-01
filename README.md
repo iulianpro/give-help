@@ -119,13 +119,27 @@ The website has been also tested for HTML and CSS checking and code validation w
 > ## Deployment
 I used GitHub for my version control and Heroku to host the live version of my project. To deploy my website to Heroku, I used use the following steps:
 
-* Created the app in Heroku.
-* Went to the Resources tab in Heroku and searched for Heroku Postgres in the 'Add-Ons' section.
-* Selected the free Hobby level.
-* Updated the .vscode file within my VS Code enviroment with the DATABASE_URL details, and the settings.py to connect to the database using the dj_database_url package.
-* Run the python manage.py makemigrations, python manage.py migrate, python manage.py createsuperuser commands to migrate the models into Heroku Postgres and create a new super user in the new PostgreSQL database.
-* Went to the settings tab in Heroku and clicked on the Reveal Config Vars button.
-* Copied and paste all of variables from .vscode enviroment in to Heroku's Config Vars section.
+* A) Created the app in Heroku.
+* B) Went to the Resources tab in Heroku and searched for Heroku Postgres in the 'Add-Ons' section.
+* C) Selected the free Hobby level.
+* D) Updated the .vscode file within my VS Code enviroment with the DATABASE_URL details, and the settings.py to connect to the database using the dj_database_url package.
+* E) Run the python manage.py makemigrations, python manage.py migrate, python manage.py createsuperuser commands to migrate the models into Heroku Postgres and create a new super user in the new PostgreSQL database.
+* F) Went to the settings tab in Heroku and clicked on the Reveal Config Vars button.
+* G) Copied and paste all of variables from .vscode enviroment in to Heroku's Config Vars section.
+* H) Went to the Deploy tab in Heroku, connected my app to my GitHub repository and selected Enable Automatic Deployment as the deployment method.
+* I) Went to the Developers section in Stripe and clicked on API Keys.
+* J) Copied and pasted the Publishable Key and Secret Key and set them as the STRIPE_PUBLISHABLE and STRIPE_SECRET environment variables.
+* K) Updated the settings.py with the new Stripe environment variables.
+* L) Went to the S3 section of AWS and created a new S3 bucket.
+* M) Updated the settings.py file in my local workspace with the relevant variables S3 bucket.
+* N) Created a custom_storages.py file with classes to route to the relevant location settings for static and media files.
+* O) Updated the settings.py file with the relevant configuration for static and media file storage.
+* P) Run the python manage.py collectstatic command to push the static files to my S3 bucket.
+* R) Created a requirements.txt file using the following command in the terminal window
+* S) Created a Procfile file.
+* T) Pushed all changes to my GitHub repository.
+
+Website was successfully deployed to Heroku.
 
 ![VAR](https://myfirst-ecommerce.s3.eu-west-2.amazonaws.com/static/img/var.png)
 
