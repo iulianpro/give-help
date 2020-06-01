@@ -107,7 +107,7 @@ To create this website, several technologies were used, as well as some framewor
 
 
 > ## Testing
-The website was tested both during and after the development of each section separately but also after its completion. I tested all the functionality in the main browsers that run on several operating systems: Chrome, Firefox, Opera, Microsoft Edge and Safari, in Windows 10, Mac OSX 10.14, Android and iOS operating systems. For full responsiveness, for the whole site, I used Materiale.
+The website was tested both during and after the development of each section separately but also after its completion. I tested all the functionality in the main browsers that run on several operating systems: Chrome, Firefox, Opera, Microsoft Edge and Safari, in Windows 10, Mac OSX 10.14, Android and iOS operating systems. For full responsiveness, for the whole site, I used Materialize.
 
 Testing during section development was done primarily with Chrome DevTools, making sure each element works correctly and optimally, including responsiveness across devices. For navbar, I tested the functionality of all links, including the site brand. I also tested toggle and collapse functioning in small and medium devices.
 
@@ -117,6 +117,18 @@ The website has been also tested for HTML and CSS checking and code validation w
 
 
 > ## Deployment
+I used GitHub for my version control and Heroku to host the live version of my project. To deploy my website to Heroku, I used use the following steps:
+
+* Created the app in Heroku.
+* Went to the Resources tab in Heroku and searched for Heroku Postgres in the 'Add-Ons' section.
+* Selected the free Hobby level.
+* Updated the .vscode file within my VS Code enviroment with the DATABASE_URL details, and the settings.py to connect to the database using the dj_database_url package.
+* Run the python manage.py makemigrations, python manage.py migrate, python manage.py createsuperuser commands to migrate the models into Heroku Postgres and create a new super user in the new PostgreSQL database.
+* Went to the settings tab in Heroku and clicked on the Reveal Config Vars button.
+* Copied and paste all of variables from .vscode enviroment in to Heroku's Config Vars section.
+
+![VAR](https://myfirst-ecommerce.s3.eu-west-2.amazonaws.com/static/img/var.png)
+
 ### ![#2b4438](https://placehold.it/800x20/ffffff/ffffff) [⬆](https://github.com/iulianpro/give-help#table-of-contents)
 
 
