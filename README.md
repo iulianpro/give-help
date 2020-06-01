@@ -59,6 +59,10 @@ As a structure, I could say that the website has three major components, a compo
 ### Skeleton
 The three components mentioned above can in turn be divided into several functionalities. A component through which the user can make a donation both through a payment with a credit card and through the purchase of gifts from the online store. A second component is the management of personal data by creating an account. The user is thus able to register his personal data, to modify them, to be able to make a request to reset the access password. A third component is the story of this campaign created by Asiciatia Daruieste Viata din Romania, the user can find out details about the project, view photos, access external resources where they can find more information, subscribe to a newslatter to be up to date with the evolution of the campaign.
 
+* [Mobile wireframes]();
+* [Tablet wireframes]();
+* [Desktop wireframes]();
+
 ### Surface
 The color palette used in the design of this website was determined with Adobe Color and is not accidental, using the color gray, which symbolizes less pleasant things, suffering in the case of small beneficiaries of this cause, and inserts of strong shades of yellow and orange that suggest hope, the sun and its healing power.
 
@@ -103,6 +107,12 @@ To create this website, several technologies were used, as well as some framewor
 
 
 > ## Testing
+The website was tested both during and after the development of each section separately but also after its completion. I tested all the functionality in the main browsers that run on several operating systems: Chrome, Firefox, Opera, Microsoft Edge and Safari, in Windows 10, Mac OSX 10.14, Android and iOS operating systems. For full responsiveness, for the whole site, I used Materiale.
+
+Testing during section development was done primarily with Chrome DevTools, making sure each element works correctly and optimally, including responsiveness across devices. For navbar, I tested the functionality of all links, including the site brand. I also tested toggle and collapse functioning in small and medium devices.
+
+The website has been also tested for HTML and CSS checking and code validation with [HTML Validator](https://validator.w3.org/) and [CSS Validator](https://jigsaw.w3.org/css-validator/).
+
 ### ![#2b4438](https://placehold.it/800x20/ffffff/ffffff) [⬆](https://github.com/iulianpro/give-help#table-of-contents)
 
 
