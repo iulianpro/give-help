@@ -62,9 +62,9 @@ The three components mentioned above can in turn be divided into several functio
 ### Surface
 The color palette used in the design of this website was determined with Adobe Color and is not accidental, using the color gray, which symbolizes less pleasant things, suffering in the case of small beneficiaries of this cause, and inserts of strong shades of yellow and orange that suggest hope, the sun and its healing power.
 
-* ![#f9f9f9](https://placehold.it/75x20/f9f9f9/f9f9f9) #f9f9f9
-* ![#ff4501](https://placehold.it/75x20/ff4501/ff4501) #ff4501
-* ![#ffaf02](https://placehold.it/75x20/ffaf02/ffaf02) #ffaf02
+* ![#f9f9f9](https://placehold.it/75x20/f9f9f9/f9f9f9)  ```#f9f9f9```
+* ![#ff4501](https://placehold.it/75x20/ff4501/ff4501)  ```#ff4501```
+* ![#ffaf02](https://placehold.it/75x20/ffaf02/ffaf02)  ```#ffaf02```
 ### ![#2b4438](https://placehold.it/800x20/ffffff/ffffff) [⬆](https://github.com/iulianpro/give-help#table-of-contents)
 
 
