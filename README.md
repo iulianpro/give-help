@@ -5,25 +5,24 @@
 ![Give Help](https://raw.githubusercontent.com/iulianpro/give-help/master/wireframe/multi-device-mockup.png)
 
 > ## Table of Contents
-* [UX]()
-    - [Project goals]()
-    - [Audience goals]()
-    - [Website owner goals]()
-    - [Strategy]()
-    - [Scope]()
-    - [Structure]()
-    - [Skeleton]()
-    - [Surface]()
-* [Features]()
-    - [Existing Features]()
-    - [Left to Implement]()
-* [Technologies Used]()
-* [Testing]()
-* [Deployment]()
-* [Credits]()
-    - [Content]()
-    - [Media]()
-    - [Acknowledgements]()
+* [UX](https://github.com/iulianpro/give-help#ux)
+    - [Project goals](https://github.com/iulianpro/give-help#project-goals)
+    - [Audience goals](https://github.com/iulianpro/give-help#audience-goals)
+    - [Website owner goals](https://github.com/iulianpro/give-help#website-owner-goals)
+    - [Strategy](https://github.com/iulianpro/give-help#strategy)
+    - [Scope](https://github.com/iulianpro/give-help#scope)
+    - [Structure](https://github.com/iulianpro/give-help#structure)
+    - [Skeleton](https://github.com/iulianpro/give-help#skeleton)
+    - [Surface](https://github.com/iulianpro/give-help#surface)
+* [Features](https://github.com/iulianpro/give-help#features)
+    - [Existing Features](https://github.com/iulianpro/give-help#existing-features)
+    - [Left to Implement](https://github.com/iulianpro/give-help#left-to-implement)
+* [Technologies Used](https://github.com/iulianpro/give-help#technologies-used)
+* [Testing](https://github.com/iulianpro/give-help#testing)
+* [Deployment](https://github.com/iulianpro/give-help#deployment)
+* [Credits](https://github.com/iulianpro/give-help#credits)
+    - [Content/Media](https://github.com/iulianpro/give-help#contentmedia)
+    - [Acknowledgements](https://github.com/iulianpro/give-help#acknowledgements)
 
 
 > ## UX
@@ -59,9 +58,8 @@ As a structure, I could say that the website has three major components, a compo
 ### Skeleton
 The three components mentioned above can in turn be divided into several functionalities. A component through which the user can make a donation both through a payment with a credit card and through the purchase of gifts from the online store. A second component is the management of personal data by creating an account. The user is thus able to register his personal data, to modify them, to be able to make a request to reset the access password. A third component is the story of this campaign created by Asiciatia Daruieste Viata din Romania, the user can find out details about the project, view photos, access external resources where they can find more information, subscribe to a newslatter to be up to date with the evolution of the campaign.
 
-* [Mobile wireframes]();
-* [Tablet wireframes]();
-* [Desktop wireframes]();
+* [Tablet/Mobile wireframes](https://github.com/iulianpro/give-help/tree/master/wireframe/tablet_mobile);
+* [Desktop wireframes](https://github.com/iulianpro/give-help/tree/master/wireframe/desktop);
 
 ### Surface
 The color palette used in the design of this website was determined with Adobe Color and is not accidental, using the color gray, which symbolizes less pleasant things, suffering in the case of small beneficiaries of this cause, and inserts of strong shades of yellow and orange that suggest hope, the sun and its healing power.
