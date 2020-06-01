@@ -93,11 +93,11 @@ To create this website, several technologies were used, as well as some framewor
 
 | A  | B  | C  | D  | E  |
 |---|---|---|---|---|
-|[HTML](https://www.w3schools.com/html/default.asp) |[Django](https://flask.palletsprojects.com/en/1.1.x/) | [Amazon Web Services](https://aws.amazon.com/) |[CSS validator](https://jigsaw.w3.org/css-validator/) |[Heroku](https://jinja.palletsprojects.com/en/2.11.x/) |
+|[HTML](https://www.w3schools.com/html/default.asp) |[Django](https://flask.palletsprojects.com/en/1.1.x/) | [Amazon WS](https://aws.amazon.com/) |[CSS validator](https://jigsaw.w3.org/css-validator/) |[Heroku](https://jinja.palletsprojects.com/en/2.11.x/) |
 |[CSS](https://www.w3schools.com/css/default.asp) |[Postgresql](https://www.postgresql.org/) | [TravisCI](https://travis-ci.org/) |[CSS Autoprefixer](https://autoprefixer.github.io/) |[Chrome DevTools](https://autoprefixer.github.io/) |
-|[Python](https://www.python.org/) |[Stripe](https://stripe.com/gb) |[MailChimp](http://mailchimp.com) |[VS Code](https://autoprefixer.github.io/) | [Sqlite](https://www.sqlite.org/index.html) |
+|[Python](https://www.python.org/) |[Stripe](https://stripe.com/gb) |[MailChimp API](http://mailchimp.com) |[VS Code](https://autoprefixer.github.io/) | [Sqlite](https://www.sqlite.org/index.html) |
 |[Materialize](https://materializecss.com/) |[Gunicorn](https://gunicorn.org/) |[Font Awesome](https://fontawesome.com/) |[Git](https://git-scm.com/) |[Hnet](https://hnet.com/png-to-ico/) |
-|[jQuery](https://jquery.com/) |[PopperJS](https://popper.js.org/) |[HTML Validator](https://validator.w3.org/) |[GitHub](https://github.com/) | |
+|[jQuery](https://jquery.com/) |[PopperJS](https://popper.js.org/) |[HTML Validator](https://validator.w3.org/) |[GitHub](https://github.com/) | [DJ DDatabase URL](https://pypi.org/project/dj-database-url/) |
 
 ### ![#2b4438](https://placehold.it/800x20/ffffff/ffffff) [⬆](https://github.com/iulianpro/give-help#table-of-contents)
 
