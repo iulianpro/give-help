@@ -45,8 +45,14 @@ The target user of this website is any internet user who could get involved in t
 * to be able to subscribe to receive a newsletter with news regarding this humanitarian campaign.
 
 ### Website owner goals
+As I mentioned above, the main goal for which, as an owner, I made this website, was to make known the approach of an NGO in Romania which, despite all the problems encountered, with the participation of an important component of civil society, manages to build from scratch a multidisciplinary hospital dedicated to children who suffers from cancer.
+
 ### Strategy
+We wanted this project to be a platform that facilitates the satisfaction of the needs of both the beneficiary, through the possibility of collecting donations in order to reach the assumed target, that of building a hospital but also of the users of this website who would like to get involved in supporting this cause. The whole project provides basic functionalities in order to function optimally and achieve the goal, but in the future, other functionalities can be thought of and added.
+
 ### Scope
+The main purpose is to facilitate the connection between a non-governmental organization, a non-profit association and potential users who can get involved in supporting the cause through direct or indirect donations.
+
 ### Structure
 ### Skeleton
 ### Surface
