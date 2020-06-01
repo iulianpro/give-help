@@ -141,7 +141,33 @@ I used GitHub for my version control and Heroku to host the live version of my p
 
 Website was successfully deployed to Heroku.
 
+To run my code locally, users can download a local copy of my code to their desktop by completing the following steps:
+
+* **A)** Go to [GitHub Repository](https://github.com/iulianpro/give-help)
+* **B)** Click on 'clone or download' under the repository name.
+* **C)** Copy the clone URL for the repository in the 'clone with HTTPs section'.
+* **D)** Open your local IDE.
+* **E)** Change the current working directory to the location where you want the cloned directory to be made.
+* **F)** Type git clone then paste the URL you copied in Step **C)**:
+```git clone https://github.com/USERNAME/REPOSITORY```
+* **G)** Press Enter to complete the process and create your local clone.
+* **H)** Set your own credentials for the environment variables
+* **I)** Enter and save your own credentials in enviroment.
+* **J)** Install the requirements.txt file by running the below command in your CLI terminal
+```pip install -r requirements.txt```
+* **K)** Run one of the following commands in your terminal to launch the Django project
+``python manage.py runserver``
+* **L)** Access browser where your local server is running.
+* **M)** Run the following commands to migrate the database models and create a super user
+``python manage.py makemigrations``
+``python manage.py migrate``
+``python manage.py createsuperuser``
+* **N)** In the heroku dashboard for the application, click on "Settings" > "Reveal Config Vars".
+* **O)** Set the following config vars in heroku:
+
 ![VAR](https://myfirst-ecommerce.s3.eu-west-2.amazonaws.com/static/img/var.png)
+
+Once the migrations are completed and the super user has been created successfully, the site should be running locally.
 
 ### ![#2b4438](https://placehold.it/800x20/ffffff/ffffff) [⬆](https://github.com/iulianpro/give-help#table-of-contents)
 
